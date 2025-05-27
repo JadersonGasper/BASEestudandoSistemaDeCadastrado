@@ -1,0 +1,14 @@
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.AssemblyInfoInputs.cache
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.AssemblyInfo.cs
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.csproj.CoreCompileInputs.cache
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\bin\Debug\net8.0\absorvendoConteudoPratico.exe
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\bin\Debug\net8.0\absorvendoConteudoPratico.deps.json
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\bin\Debug\net8.0\absorvendoConteudoPratico.runtimeconfig.json
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\bin\Debug\net8.0\absorvendoConteudoPratico.dll
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\bin\Debug\net8.0\absorvendoConteudoPratico.pdb
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.dll
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\refint\absorvendoConteudoPratico.dll
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.pdb
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.genruntimeconfig.cache
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\ref\absorvendoConteudoPratico.dll
