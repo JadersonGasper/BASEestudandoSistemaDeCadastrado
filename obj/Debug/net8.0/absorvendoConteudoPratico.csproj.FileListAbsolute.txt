@@ -12,3 +12,4 @@ C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\
 C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.pdb
 C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.genruntimeconfig.cache
 C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\ref\absorvendoConteudoPratico.dll
+C:\Users\jader\source\repos\absorvendoConteudoPratico\absorvendoConteudoPratico\obj\Debug\net8.0\absorvendoConteudoPratico.sourcelink.json
