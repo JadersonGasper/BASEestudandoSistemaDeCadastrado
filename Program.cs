@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 class MainProduto
 {
     public static void Main(string[] args)
@@ -7,12 +8,9 @@ class MainProduto
         book.titulo = "Psicologia Moderna";
         book.autor = "Jaderson de Gasper";
         book.preco = 59.90;
-        book.estoque = 0;
-        Console.WriteLine($"O nome do livro é: {book.titulo}, do autor {book.autor}");
-        Console.WriteLine($"O valor deste livro é: {book.preco:F2}");
-                                                                                                        /*Produto p1 = new Produto();
-                                                                                                        p1.nome = "Alberto";
-                                                                                                        Console.WriteLine($"O nome é: {p1.nome}");*/
+        book.Comprar(10);
+        Console.WriteLine(book.ObterTexto());
+        
     }
 }
 
@@ -37,8 +35,6 @@ class Livro
             }
         }
     }
-    public string autor { get; set; }
-
     public double _preco;
     public double preco
     {
@@ -58,33 +54,44 @@ class Livro
             }
         }
     }
+    public string autor { get; set; }
+    // //  // //  // //  // //  // //  // //  // //  // //  // //  
     public int estoque { get; private set; }
+    public Livro() // construtor padrão
+    {
+        this.estoque = 0;
+    }
+    public Livro(string titulo, double preco, string autor)
+    {
+        this.titulo = titulo;
+        this.preco = preco;
+        this.autor = autor;
+        this.estoque = 0;
+        
+    }
+    public int Vender(int qtd)
+    {
+        if (this.estoque - qtd >= 0)
+            this.estoque -= qtd;
+
+        return this.estoque;
+    }
+    public int Comprar(int qtd)
+    {
+        this.estoque += qtd;
+        return this.estoque;
+    }
+    public string ObterTexto()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"\nTitulo: {this.titulo}\n");
+        sb.Append($"\nAutor: {this.autor}\n");
+        sb.Append($"Preço: {this.preco}\n");
+        sb.Append($"Estoque: {this.estoque}\n");
+        return sb.ToString();
+    }
+    // //  // //  // //  // //  // //  // //  // //  // //  // //  
 }
-
-                                                                                                    /*class Produto
-                                                                                                    {
-                                                                                                        public string _nome;
-                                                                                                        public string nome
-                                                                                                        {
-                                                                                                            get
-                                                                                                            {
-                                                                                                                return _nome; // as variáveis internas da classe são os atributos
-                                                                                                            }
-                                                                                                            set
-                                                                                                            {
-                                                                                                                if (value.Length > 1) { 
-                                                                                                                nome = value;
-                                                                                                            }
-                                                                                                                else
-                                                                                                                {
-                                                                                                                    Console.WriteLine($"Nome inválido");
-                                                                                                                    throw new Exception("Nome do produto deve ter pelo menos 2 caracteres."); //quebra o código; para tratar o erro, usar try/catch
-                                                                                                                }
-                    
-                                                                                                            } 
-                                                                                                        }
-                                                                                                    }*/
-
 
 
 
