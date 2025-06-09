@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("absorvendoConteudoPratico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6c579b9aa6ea9592e4da5f4547f4f5f9269e7f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dde31b0d78981ec8b71482790fb77a641405825")]
 [assembly: System.Reflection.AssemblyProductAttribute("absorvendoConteudoPratico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("absorvendoConteudoPratico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
