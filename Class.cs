@@ -1,181 +1,75 @@
-﻿class Produto
-{
-    private string nome;
+﻿using System.Text;
 
-    public string Nome
+class Produto
+{                        // atributo armazena valor
+    private string nome; // 1. private só será visível para a CLASSE
+                         // Errata: forma de usar a variável na classe Main(?)
+    public string Nome //! propriedades não armazenam valor; são a ponte entre o atributo
     {
         get
         {
-            return nome;
+            return nome; //.ToUpper(); = trabalha com o valor da variável
         }
         set
         {
             if (value.Length > 1)
                 nome = value;
             else
-                throw new Exception("Nome do produto ter pelo menos 2 caracteres");
+                throw new Exception("Nome do produto ter pelo menos 2 caracteres.");
         }
     }
+
+    /*private double preco;
+    public double Preco
+    {
+        get { return preco; }
+        set { preco = value; }
+    }*/
+    // a linha abaixo equivale nos bastidores a linha acima.
     public double Preco { get; set; }
 
-    public int Estoque { get; private set; }
-
-    public Produto()
+    public int Estoque { get; private set; } //private: outras partes do código
+                                             //possam consultar o estoque,
+                                             //mas não possam alterá-lo diretamente —
+                                             //só a própria classe pode fazer isso por
+                                             //meio de métodos como Vender() ou Repor().
+    public Produto() //é um método construtor por ser public pois não pode haver
+                     //dois "Produto"; se fosse o caso, este teria que ser private.
+                     //não possui retorno, é público e tem o mesmo nome da classe =
+                     //método construtor                     
     {
-        this.Estoque = 0;
+        this.Estoque = 0; // todo novo obj. do tipo produto, terá o estoque = 0.
     }
 
     public Produto(string nome, double preco)
     {
         this.Nome = nome;
         this.Preco = preco;
-        this.Estoque = 0;
+        this.Estoque = 0; // aqui, o 'this.' não se faz necessário, pois não há um
+                          // mesmo 'Estoque' no atributo da classe
     }
-    public int Vender(int qt)
-    {
 
+    public int Vender(int qtde)
+    {
+        if (this.Estoque - qtde >= 0)
+        {
+            this.Estoque -= qtde;
+        }
+        return this.Estoque;
     }
-}
 
-/*using System.Text;
-class Livro
-{
-    public string _titulo;
-    public string titulo
+    public int Comprar(int qtde)
     {
-        get
-        {
-            return _titulo;
-        }
-        set
-        {
-            if (value.Length > 2) // neste contexto, o Length é uma propriedade!
-            {
-                _titulo = value;
-            }
-            else
-            {
-                Console.WriteLine("Nome inválido.");
-            }
-        }
+        this.Estoque += qtde;
+        return this.Estoque;
     }
-    public double _preco;
-    public double preco
-    {
-        get
-        {
-            return _preco;
-        }
-        set
-        {
-            if (value > 0)
-            {
-                _preco = value;
-            }
-            else
-            {
-                 Console.WriteLine("Preço inválido");
-            }
-        }
-    }
-    public string _autor;
-    public string autor { get; set; }
-    // //  // //  // //  // //  // //  // //  // //  // //  // //  
-    public int estoque { get; private set; }
-    public Livro() // construtor padrão; mesmo nome da classe, não tem retorno, é público.
-    {
-        this.estoque = 0;
-    }
-    public Livro(string _titulo, double _preco, string _autor)
-    {
-        this._titulo = titulo;
-        this._preco = preco;
-        this._autor = autor;
-        this.estoque = 0;
-        
-    }
-    public int Vender(int qtd)
-    {
-        if (this.estoque - qtd >= 0)
-            this.estoque -= qtd;
 
-        return this.estoque;
-    }
-    public int Comprar(int qtd)
+    public string ObterTexto() //método
     {
-        this.estoque += qtd;
-        return this.estoque;
-    }
-    public string ObterTexto()
-    {
-        StringBuilder sb = new StringBuilder();
-        sb.Append($"\nTitulo: {this.titulo}\n");
-        sb.Append($"\nAutor: {this.autor}\n");
-        sb.Append($"Preço: {this.preco}\n");
-        sb.Append($"Estoque: {this.estoque}\n");
+        StringBuilder sb = new StringBuilder(); //instanciando um objeto
+        sb.Append($"\nNome: {this.Nome}\n");
+        sb.Append($"Preço: {this.Preco}\n");
+        sb.Append($"Estoque: {this.Estoque}\n");
         return sb.ToString();
     }
-    // //  // //  // //  // //  // //  // //  // //  // //  // //  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*using System;
-
-class MainProduto // "molde do bolo"
-{
-    public static void Main(string[] args)
-    {
-        Produto p1 = new Produto(); // Produto p1 = "bolo chamado p1"; // new Produto() = "molde para assar outro bolo"
-        p1._nome = "Alberto";
-        Console.WriteLine($"O nome é: {p1._nome}");
-    }
-}
-
-class Produto
-{
-    public string _nome;
-    public string nome
-    {
-        get
-        {
-            return nome;
-        }
-        set
-        {
-            nome = value;
-        }
-    }
-}*/
